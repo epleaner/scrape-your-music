@@ -1,2 +1,2 @@
 # scrapeyourmusic
-A python-powered web scraper for www.rateyourmusic.com
+A python-based web scraper for www.rateyourmusic.com, powered by scrapy.
