@@ -26,8 +26,6 @@ class AlbumSpider(Spider):
 
         album_info = sel.xpath('.//table[@class="album_info"]')
 
-
-        items = []
         item = Album()
 
         item['url'] = response.url
@@ -48,17 +46,4 @@ class AlbumSpider(Spider):
         item['secondaryGenres'] = album_info.xpath('.//tr[@class="release_genres"]/td/div/span[@class="release_sec_genres"]/a/text()').extract()
         item['language'] = album_info.xpath('.//tr')[7].xpath('.//td/text()').extract()
 
-        items.append(item)
-        return items
-
-        # sel = Selector(response)
-        # sites = sel.xpath('//ul[@class="directory-url"]/li')
-        # items = []
-        #
-        # for site in sites:
-        #     item = Album()
-        #     item['name'] = 'test'#site.xpath('a/text()').extract()
-        #     #item['url'] = site.xpath('a/@href').extract()
-        #     items.append(item)
-
-        # return items
+        return item

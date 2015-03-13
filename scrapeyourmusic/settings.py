@@ -6,5 +6,5 @@ DEFAULT_ITEM_CLASS = 'scrapeyourmusic.items.Album'
 
 ITEM_PIPELINES = {'scrapeyourmusic.pipelines.FormatDataPipeline': 1}
 
-FEED_URI = 'out/scraped.json'
+FEED_URI = 'out/out.json'
 FEED_FORMAT = 'json'

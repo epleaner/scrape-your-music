@@ -18,3 +18,14 @@ class Album(Item):
     secondaryGenres = Field()
     language = Field()
 
+class Artist(Item):
+
+    url = Field()
+    name = Field()
+    formed = Field()
+    members = Field()
+    genres = Field()
+    studioAlbums = Field()
+    liveAlbums = Field()
+    EPs = Field()
+    singles = Field()
